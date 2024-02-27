@@ -14,7 +14,7 @@ Flask-WTF
 greenlet
 gunicorn==21.2.0
 h11
-httpcore==
+httpcore==1.0.4
 idna
 itsdangerous==2.1.2
 Jinja2

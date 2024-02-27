@@ -5,13 +5,47 @@
 
 <body>
     <div class="container">
-      <div class="conteudo">
-        {% for foto in fotos %}
-            <a href="{{ url_for('perfil', id_usuario=foto.id_usuario)}}" class="bloco-imagem">
-              <img src="{{ url_for('static', filename='fotos_post/{}'.format(foto.imagem)) }}">
-            </a>
-        {% endfor %}
-      </div>
+        <div>
+            <a href="https://www.youtube.com/channel/UCRqTRZdp3D0vFiQp3GqFWJA"><button class="bblc">VIDEOS AULAS</button></a>
+        </div>
+        <div>
+            <a href="https://docs.google.com/spreadsheets/d/1gH0aKiIRh9xgkcOQaDoUhOT-DFRlvNw4/edit?usp=sharing&ouid=106701857338878502872&rtpof=true&sd=true"><button class="bblc">OLIMPIADAS</button></a>
+        </div>
+        <div>
+            <a href="https://drive.google.com/drive/folders/1i3gnesWe3mtY18JqlUaOxb_gyPZpVup-?usp=sharing"><button class="bblc">MATEMÁTICA</button></a>
+        </div>
+        <div>
+            <a href><button class="bblc">OFFICE365</button></a>
+        </div>
+        <div>
+            <a href="https://docs.google.com/spreadsheets/d/1N-rLLTsd7YEYLCO1CaPKVE5MqZOfzXGh/edit?usp=sharing&ouid=102791430163039162185&rtpof=true&sd=true"><button class="bblc">ATALHOS</button></a>
+        </div>
+        <div>
+            <a href=""><button class="bblc">JOGOS</button></a>
+        </div>
+        <div>
+            <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"><button class="bblc">ENEM</button></a>
+        </div>
+
+        <nav>
+            <div class="imagem-mat">
+                <img src="{{url_for('static', filename='fotos_site/aulas.jpeg')}}">
+                <button class="lij"><a href="https://www.instagram.com/exact_technology?igsh=czJ6aGs3bW5ja3Y0">Instagram</a><button>
+            </div>
+            <div class="imagem-mat">
+                <img src="{{url_for('static', filename='fotos_site/wtzp.jpg')}}">
+                <button class="lij"><a href="https://api.whatsapp.com/message/GLRXUSHTNSPSM1?autoload=1&app_absent=0">Whatsapp</a></button>
+            </div>
+            <div class="imagem-mat">
+                <img src="{{url_for('static', filename='fotos_site/opc.jpeg')}}">
+                <button class="lij"><a href="https://www.instagram.com/exact_technology?igsh=czJ6aGs3bW5ja3Y0">Opções</a></button>
+            </div>
+            <div class="imagem-mat">
+                <img src="{{url_for('static', filename='fotos_site/bibli.jpeg')}}">
+                <button class="lij"><a href="https://pag.ae/7-hsh2fVn">KIT EBOOK 29,00 R$ </a></button>
+            </div>
+        </nav>
+        <H1>AQUI VAMOS MOSTRAR QUE A MATEMÁTICA PODE SER MAIS SIMPLES QUE VOCÊ IMAGINA. </H1>
     </div>
 </body>
 

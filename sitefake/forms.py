@@ -9,7 +9,6 @@ class FormLogin(FlaskForm):
     email = StringField("E-mail", validators= [DataRequired(), Email()])
     senha = PasswordField("Senha", validators=[DataRequired()])
     botao = SubmitField("Fazer Login")
-
     def validate_email(self, email):
         usuario = Usuario.query.filter_by(email=email.data).first()
         if not usuario:
@@ -34,3 +33,4 @@ class FormCriarConta(FlaskForm):
 class FormFoto(FlaskForm):
     foto = FileField("Foto", validators=[DataRequired()])
     botao_confirmacao = SubmitField("Enviar")
+

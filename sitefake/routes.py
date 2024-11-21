@@ -19,7 +19,7 @@ def homepage():
 
 
 
-"""@app.route("/criarconta",methods=["GET", "POST"])
+@app.route("/criarconta",methods=["GET", "POST"])
 def criarconta():
     formcriarconta = FormCriarConta()
     if formcriarconta.validate_on_submit():
@@ -60,14 +60,13 @@ def perfil(id_usuario):
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for("homepage"))"""
+    return redirect(url_for("homepage"))
 
 @app.route("/feed")
 def feed():
     fotos = Fotos.query.order_by(Fotos.data_criacao.desc()).all()
     return render_template("feed.html", fotos=fotos)
 
-
-"""@app.route("/",methods=["GET", "POST"])
+@app.route("/",methods=["GET", "POST"])
 def WEB():
-    return render_template("webproject.html")"""
+    return render_template("webproject.html")

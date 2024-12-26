@@ -7,30 +7,15 @@ from sitefake.forms import FormLogin, FormCriarConta, FormFoto
 import os
 from werkzeug.utils import secure_filename
 
+@app.route("/",methods=["GET", "POST"])
+def WEB():
+    return render_template("webproject.html")
+
 @app.route("/homepage",methods=["GET", "POST"])
 def homepage():
-    return render_template('feed.html')
-
-
-
-@app.route("/criarconta",methods=["GET", "POST"])
-def criarconta():
-    return render_template('criar_conta.html')
-
-
-@app.route("/perfil", methods=["GET", "POST"])
-def perfil():
-    return render_template('perfil.html')
-
-
-@app.route("/logout")
-def logout():
-    return redirect(url_for("homepage"))
+    return render_template('homepage.html')
 
 @app.route("/feed")
 def feed():
     return render_template("feed.html")
 
-@app.route("/",methods=["GET", "POST"])
-def WEB():
-    return render_template("webproject.html")

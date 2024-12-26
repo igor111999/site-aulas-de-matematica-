@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 
 @app.route("/",methods=["GET", "POST"])
 def WEB():
-    return render_template("webproject.html")
+    return render_template("homepage.html")
 
 @app.route("/homepage",methods=["GET", "POST"])
 def homepage():

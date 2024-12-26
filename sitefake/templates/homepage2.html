@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{% block titulo %}
+        ICG PROJETOS
+        {% endblock %}</title>
+  </head>
+
+{% block body %}
+  <body class="overflow-hidden">
+    <div class="container">
+      <header>
+        <nav>
+          <div class="logo-pinterest">
+              <title>ICG PRJETOS</title>
+            <h1>ICG PROJETOS</h1><H4> Igor C.</H4>
+          </div>
+
+          <div class="restante-nav">
+            <a href="" class="link-nav">About</a>
+            <a href="" class="link-nav">Business</a>
+            <a href="" class="link-nav">Blog</a>
+          </div>
+        </nav>
+      </header>
+
+      <img src="{{url_for('static', filename='fotos_site/fundo-login2.jpeg')}}" class="imagem-pinterest" />
+
+
+      <div class="container-popup">
+
+          {% block formulario %}
+
+        <form method="POST" class="popup">
+            {{ form.csrf_token }}
+          <p><h2><em>BEM-VINDO(A)</em></h2></p>
+            <h2><p>MATEMÁTICA</p></h2>
+            <h2><p> INFORMÁTICA E </p></h2>
+            <H6>AULAS PROJETOS DE DESENVOLVIMENTO</H6>
+
+
+          <div class="div-input">
+            {{ form.email.label(class="label") }}
+           {% if form.email.errors %}
+              {% for erro in form.email.errors %}
+                <p style=" color: red">{{erro}}</p>
+              {% endfor %}
+           {% endif %}
+            {{ form.email(class="input") }}
+          </div>
+
+          <div class="div-input">
+            {{ form.senha.label(class="label") }}
+            {% if form.senha.errors %}
+              {% for erro in form.senha.errors %}
+                <p style=" color: red">{{erro}}</p>
+              {% endfor %}
+           {% endif %}
+            {{ form.senha(class="input") }}
+          </div>
+
+          <div class="div-botao">
+            {{ form.botao(class="botao-login") }}
+          </div>
+
+          <div class="button">
+              <a href="https://pag.ae/7-gRSQKuo"class="link-criarconta">ACESSE A PAGINA PRINCIPAL</a>
+          </div>
+
+        <form/>
+          {% endblock %}
+      </div>
+    </div>
+{% endblock %}
+  </body>
 </html>

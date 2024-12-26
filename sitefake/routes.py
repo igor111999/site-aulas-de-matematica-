@@ -19,7 +19,7 @@ def criarconta():
 
 
 @app.route("/perfil", methods=["GET", "POST"])
-def perfil(id_usuario):
+def perfil():
     return render_template('perfil.html')
 
 

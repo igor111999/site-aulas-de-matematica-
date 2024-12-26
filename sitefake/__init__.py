@@ -10,9 +10,9 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://banco_mat_user:pVvo90xMSRa
 app.config["SECRET_KEY"] ="c3ab69c6c37bfea8b286e2942641d995"
 app.config["UPLOAD_FOLDER"] = "static/fotos_post"
 
-database = SQLAlchemy(app)
-bcrypt = Bcrypt(app)
-login_manager = LoginManager(app)
+database = SQLAlchemy()
+bcrypt = Bcrypt()
+login_manager = LoginManager()
 login_manager.login_view = "feed"
 
 from sitefake import routes

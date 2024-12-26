@@ -1,75 +1,14 @@
-{% extends "homepage.html" %}
-
-{% block titulo %}
-    sitedev
-{% endblock %}
-
-      <div class="container-popup">
-
-          {% block formulario %}
-
-        <form method="POST" class="popup">
-            {{ form.csrf_token }}
-
-          <p><h2>Bem-vindo(a) ao WEB PROJECT</h2></p><p>BIG DATA E PROGRAMAÇÃO</p>
-
-
-            <div class="div-input">
-            {{ form.username.label(class="label") }}
-            {{ form.username(class="input") }}
-          </div>
-
-            <div class="div-input">
-            {{ form.email.label(class="label") }}
-           {% if form.email.errors %}
-              {% for erro in form.email.errors %}
-                <p style=" color: red">{{erro}}</p>
-              {% endfor %}
-           {% endif %}
-            {{ form.email(class="input") }}
-          </div>
-
-          <div class="div-input">
-            {{ form.senha.label(class="label") }}
-           {% if form.senha.errors %}
-              {% for erro in form.senha.errors %}
-                <p style=" color: red">{{erro}}</p>
-              {% endfor %}
-           {% endif %}
-            {{ form.senha(class="input") }}
-          </div>
-
-          <div class="div-input">
-            {{ form.confirmacao_senha.label(class="label") }}
-            {% if form.confirmacao_senha.errors %}
-              {% for erro in form.confirmacao_senha.errors %}
-                <p style=" color: red">{{erro}}</p>
-              {% endfor %}
-           {% endif %}
-            {{ form.confirmacao_senha(class="input") }}
-          </div>
-
-          <div class="div-botao">
-            {{ form.botao(class="botao-login") }}
-            <a href="{{ url_for('homepage') }}"class="link-criarconta"> Ja tem uma conta, faça login/a>
-          </div>
-
-        <form/>
-          {% endblock %}
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
 
 
 

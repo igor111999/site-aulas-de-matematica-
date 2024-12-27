@@ -33,7 +33,6 @@
           justify-content: center;
           align-items: center;
           background: linear-gradient(#0d0d0d, #212121);
-          position:auto;
         }
 
         div.container a {
@@ -45,6 +44,12 @@
           position: relative;
           z-index: 0;
           cursor: pointer;
+        }
+        .fix {
+          display: fixed;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          padding: 5px;          
         }
 
         .brown {
@@ -211,7 +216,7 @@
       <a href="https://api.whatsapp.com/message/GLRXUSHTNSPSM1?autoload=1&app_absent=0" alt="CONTATO">CONTATO</a>
     </div>
     <div class="container brown highlightTextOut">
-      <div>
+      <div class="fix">
         <img src="static/fotos_site/aulas.jpeg" style= width:220px; height:140px">
         <img src="static/fotos_site/logo.jpeg" style= width:220px; height:140px">
         <img src="static/fotos_site/idelm.png" style= width:220px; height:140px">

@@ -177,7 +177,7 @@
         }
         svg {
             display: flex;
-            position: sticky;
+            position: relative;
             margin: 250px;
             top: 0;
             left: 0;
@@ -193,13 +193,19 @@
             position: inline;
             margin: 250px;
         }
-        @media screen and (max-width:768px) {
-          body {
-            overflow-x: hidden;
-            display: relative;
-            position: relative;
-          }
-        }
+        @media (width < 420px) {
+            section {
+              padding-left: 0;
+              gap: 20px;
+            }
+
+            footer {
+                height: 300px;
+            }
+
+            .links {
+              gap: 20px;
+            }
    </style>
 </head>
 <body>

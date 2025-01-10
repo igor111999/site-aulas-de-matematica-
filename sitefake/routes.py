@@ -11,11 +11,17 @@ from werkzeug.utils import secure_filename
 def WEB():
     return render_template("homepage.html")
 
-@app.route("/homepage",methods=["GET", "POST"])
-def homepage():
-    return render_template('homepage.html')
+@app.route("/homepage")
+def login(request):
+    return render_template(request, 'templates/homepage.html')
 
 @app.route("/feed")
-def feed():
-    return render_template("feed.html")
+def login(request):
+    return render_template(request, 'templates/feed.html')
+
+
+@app.route("/project")
+def login(request):
+    return render_template(request, 'templates/webproject.html')
+
 

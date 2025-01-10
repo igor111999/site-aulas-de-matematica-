@@ -13,15 +13,15 @@ def WEB():
 
 @app.route("/homepage")
 def login(request):
-    return render_template(request, 'templates/homepage.html')
+    return render_template(request, 'homepage.html')
 
 @app.route("/feed")
 def login(request):
-    return render_template(request, 'templates/feed.html')
+    return render_template(request, '/feed.html')
 
 
 @app.route("/project")
 def login(request):
-    return render_template(request, 'templates/webproject.html')
+    return render_template(request, '/webproject.html')
 
 

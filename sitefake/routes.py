@@ -16,12 +16,12 @@ def login(request):
     return render_template(request, 'homepage.html')
 
 @app.route("/feed")
-def login(request):
+def feed(request):
     return render_template(request, '/feed.html')
 
 
 @app.route("/project")
-def login(request):
+def project(request):
     return render_template(request, '/webproject.html')
 
 
